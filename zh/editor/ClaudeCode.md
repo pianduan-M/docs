@@ -38,7 +38,7 @@ npm install -g @anthropic-ai/claude-code
 
 1. 将`ANTHROPIC_BASE_URL` 设置为`https://tokensmind.ai`
 2. `ANTHROPIC_AUTH_TOKEN` 设置为从 [Tokensmind 平台](https://console.aihubmix.com/token) 获取的 API Key
-3. `ANTHROPIC_MODEL`：设置为[模型列表](https://tokensmind.ai/models)中支持的模型。
+3. `ANTHROPIC_MODEL`：设置为[模型列表](https://tokensmind.ai/pricing)中支持的模型。
 
 <Tabs>
   <Tab title="macOS">

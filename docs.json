@@ -29,7 +29,6 @@
                 "expanded": true,
                 "pages": [
                   "zh/guide/introduction/api-quickstart",
-                  "zh/guide/introduction/ai-workbench",
                   "zh/guide/introduction/category-table",
                   "zh/guide/introduction/group-price",
                   "zh/guide/introduction/new-token"
@@ -164,7 +163,6 @@
                 "expanded": true,
                 "pages": [
                   "en/guide/introduction/api-quickstart",
-                  "en/guide/introduction/ai-workbench",
                   "en/guide/introduction/category-table",
                   "en/guide/introduction/group-price",
                   "en/guide/introduction/new-token"
@@ -248,12 +246,6 @@
                   "en/guide/chat/Anthropic Claude",
                   "en/guide/chat/ChatGPT嵌入（Embeddings）",
                   "en/guide/chat/ChatGPT自动补全（Completions）"
-                ]
-              },
-              {
-                "group": "API manual",
-                "pages": [
-                  "en/guide/api/user-manual"
                 ]
               }
             ]

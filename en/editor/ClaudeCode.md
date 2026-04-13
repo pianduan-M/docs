@@ -37,8 +37,8 @@ npm install -g @anthropic-ai/claude-code
 For Anthropic-compatible access via Tokensmind, set:
 
 1. `ANTHROPIC_BASE_URL` → `https://tokensmind.ai`
-2. `ANTHROPIC_AUTH_TOKEN` → API key from [Tokensmind](https://console.aihubmix.com/token)
-3. `ANTHROPIC_MODEL` → a model id from the [model list](https://tokensmind.ai/models)
+2. `ANTHROPIC_AUTH_TOKEN` → API key from [Tokensmind](https://tokensmind.ai/token)
+3. `ANTHROPIC_MODEL` → a model id from the [model list](https://tokensmind.ai/pricing)
 
 <Tabs>
   <Tab title="macOS">
@@ -202,19 +202,19 @@ export ANTHROPIC_DEFAULT_HAIKU_MODEL="claude-haiku-4-5"
 
 2. Choose **Custom**.
 
-<img src="/images/claudecode/2.png" />
+<img src="/images/claudecode/2_en.png" />
 
 3. Enter API key and endpoint.
 
-<img src="/images/claudecode/3.png" />
+<img src="/images/claudecode/3_en.png" />
 
 4. **Add** to save.
 
-<img src="/images/claudecode/4.png" />
+<img src="/images/claudecode/4_en.png" />
 
 5. Home → select **tokensmind** → **Start**.
 
-<img src="/images/claudecode/5.png" />
+<img src="/images/claudecode/5_en.png" />
 
 ## VS Code extension
 

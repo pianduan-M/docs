@@ -11,7 +11,7 @@ Create an API key and make your first call.
 Replace `<Tokensmind_API_KEY>` with your [Tokensmind key](https://tokensmind.ai/token). Mind the key’s expiry and quota limits.
 :::
 
-For available `model` values, see the [model hub](https://tokensmind.ai/models) and copy the model name into your request.
+For available `model` values, see the [model hub](https://tokensmind.ai/pricing) and copy the model name into your request.
 
 ::: code-group
 
@@ -78,7 +78,7 @@ Streaming: add `"stream": true` to the request body.
 
 ## Use the OpenAI SDK
 
-Replace `<Tokensmind_API_KEY>` with your [Tokensmind key](https://tokensmind.ai/token). For `model` names, use the [model hub](https://tokensmind.ai/models).
+Replace `<Tokensmind_API_KEY>` with your [Tokensmind key](https://tokensmind.ai/token). For `model` names, use the [model hub](https://tokensmind.ai/pricing).
 
 ::: code-group
 

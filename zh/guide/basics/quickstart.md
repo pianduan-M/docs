@@ -11,7 +11,7 @@ icon: rocket
 其中 `<Tokensmind_API_KEY>` 替换为 [Tokensmind Key](https://tokensmind.ai/token)，注意 `key` 的有效期和额度限制。
 :::
 
-可使用的 `model` 列表，可查阅 [模型广场](https://tokensmind.ai/models) ，复制模型名称替换即可。
+可使用的 `model` 列表，可查阅 [模型广场](https://tokensmind.ai/pricing) ，复制模型名称替换即可。
 
 ::: code-group
 
@@ -78,7 +78,7 @@ curl 'https://tokensmind.ai/v1/chat/completions' \
 
 ## 使用 OpenAI SDK
 
-其中 `<Tokensmind_API_KEY>` 替换为 [Tokensmind Key](https://tokensmind.ai/token)，注意 `key` 的有效期和额度限制。 可使用的 `model` 列表，可查阅 [模型广场](https://tokensmind.ai/models) ，复制模型名称替换即可。
+其中 `<Tokensmind_API_KEY>` 替换为 [Tokensmind Key](https://tokensmind.ai/token)，注意 `key` 的有效期和额度限制。 可使用的 `model` 列表，可查阅 [模型广场](https://tokensmind.ai/pricing) ，复制模型名称替换即可。
 
 ::: code-group
 

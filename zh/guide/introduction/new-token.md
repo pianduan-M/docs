@@ -3,12 +3,10 @@ title: 如何新建指定分组的令牌
 icon: circle-plus
 ---
 
-![1.png](https://api.apifox.com/api/v1/projects/5443236/resources/564771/image-preview)
+1. 登录成功后，点击秘钥菜单栏，再点击创建key 按钮
 
-![2.png](https://api.apifox.com/api/v1/projects/5443236/resources/564772/image-preview)
+![1.png](/images/introduction/newToken/cn/1.png)
 
-![3.png](https://api.apifox.com/api/v1/projects/5443236/resources/564773/image-preview)
+2. 名称随便填，分组、过期时间、模型限制列表、IP白名单根据自己需求选择，点击提交创建
 
-![4.png](https://api.apifox.com/api/v1/projects/5443236/resources/564774/image-preview)
-
-![5.png](https://api.apifox.com/api/v1/projects/5443236/resources/564775/image-preview)
+![2.png](/images/introduction/newToken/cn/2.png)

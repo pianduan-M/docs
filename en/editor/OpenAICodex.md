@@ -54,11 +54,11 @@ model_reasoning_effort = "high"
 
 2. Pick **Tokensmind** from presets.
 
-<img src="/images/codex/2.png" alt="Codex 2" width="2072" height="1374" data-path="public/cn/codex-2.png" />
+<img src="/images/codex/2_en.png" alt="Codex 2" width="2072" height="1374" data-path="public/cn/codex-2.png" />
 
 3. Paste your API key → **Add**.
 
-<img src="/images/codex/3.png" alt="Codex 3" width="2072" height="1374" data-path="public/cn/codex-3.png" />
+<img src="/images/codex/3_en.png" alt="Codex 3" width="2072" height="1374" data-path="public/cn/codex-3.png" />
 
 4. Select **Tokensmind** on the home screen → **Enable**.
 
