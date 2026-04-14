@@ -1,0 +1,388 @@
+openapi: 3.0.1
+info:
+  title: ""
+  version: 1.0.0
+paths:
+  /v1/completions:
+    post:
+      summary: 原生OpenAI格式
+      deprecated: false
+      description: 根据指定的 prompt 与参数生成模型回复
+      operationId: createCompletion
+      tags: []
+      parameters:
+        - name: Content-Type
+          in: header
+          description: ""
+          required: true
+          example: application/json
+          schema:
+            type: string
+        - name: Authorization
+          in: header
+          description: ""
+          required: true
+          example: "Bearer 身份验证格式: Bearer {{API 秘钥}}。"
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-apifox-refs: {}
+              x-apifox-orders:
+                - model
+                - prompt
+                - stream
+                - stream_options
+                - max_tokens
+                - "n"
+                - seed
+                - frequency_penalty
+                - presence_penalty
+                - repetition_penalty
+                - stop
+                - temperature
+                - top_p
+                - top_k
+                - min_p
+                - logit_bias
+                - logprobs
+                - best_of
+                - 01KP5NABP505Q46C0NW8XXAPCD
+              properties:
+                model:
+                  type: string
+                  description: >-
+                    对应的模型名称。可用模型名称请参考 [TokensMind
+                    AI](https://tokensmind.ai/pricing) 中的模型库
+                prompt:
+                  type: string
+                  description: |
+                    用于生成对话的提示（提示可以是字符串、字符串数组、tokens 数组或 tokens 数组的数组）。
+                max_tokens:
+                  type: integer
+                  description: |-
+                    在生成对话时可产生的最大 tokens 数。
+                    prompt 的 tokens 数量加上 max_tokens 不能超过模型的上下文长度。
+                temperature:
+                  type: number
+                  description: >
+                    对话中的随机性程度，默认值为 1，介于 0 和 2 之间。较高的值（如 0.8）会使输出更加随机，而较低的值（如
+                    0.2），会使输出更集中且确定性更强。
+
+
+                    我们通常建议只调整此项或 top_p，而不是同时调整两者。
+                  minimum: 0
+                  maximum: 2
+                  nullable: true
+                top_p:
+                  type: number
+                  minimum: 0
+                  maximum: 1
+                  exclusiveMinimum: true
+                  description: >-
+                    作为 temperature 的替代方法，称为 nucleus sampling，模型会考虑具有 top_p 概率质量的
+                    tokens 的结果。因此，0.1 意味着只考虑构成前 10% 概率质量的 tokens。我们通常建议只调整此项或
+                    temperature，而不是同时调整两者。
+                  nullable: true
+                "n":
+                  type: integer
+                  description: >
+                    注意：由于此参数会生成多个对话，因此可能会快速消耗您的 tokens 计费额度。请谨慎使用，并确保为
+                    max_tokens 和 stop 设置了合理的值。
+                  minimum: 0
+                  maximum: 128
+                  exclusiveMinimum: true
+                  exclusiveMaximum: true
+                  nullable: true
+                stream:
+                  type: boolean
+                  description: >
+                    是否使用流式传输。默认为 false，如果设置了，tokens 将以 data-only server-sent
+                    events（SSE）发送，并以 data: [DONE] 消息终止流。
+                  nullable: true
+                stop:
+                  type: string
+                  description: 最多 4 个序列，API 将停止生成更多 tokens。返回的文本包含停止序列。
+                stream_options:
+                  type: object
+                  properties:
+                    include_usage:
+                      type: boolean
+                      description: >
+                        如果设置，将在数据: [DONE] 消息之前流式传输一个额外的 chunk。此 chunk 中的 usage
+                        字段显示整个请求的 tokens 使用统计信息，而 choices 字段始终为空数组。所有其他 chunk
+                        也将包含一个 usage 字段，但值为 null。
+                  x-apifox-orders:
+                    - include_usage
+                  description: |
+                    流式回复选项。仅当 stream 设置为 true 时设置。
+                  required:
+                    - include_usage
+                seed:
+                  type: integer
+                  description: 如果指定，我们的系统将尽最大努力进行确定性采样，以便相同的 seed 和参数的重复请求应返回相同的结果。
+                  nullable: true
+                frequency_penalty:
+                  type: number
+                  description: >
+                    默认值为 0，正值会根据新 tokens 在当前文本中的出现频率对其进行惩罚，从而降低模型重复相同内容的可能性。
+
+
+                    如果目的是仅仅减少重复样本，合理的值大约在 0.1 到 1 之间。如果目的是强烈抑制重复，可以将系数提高到
+                    2，但这可能会明显降低样本质量。负值可以用来增加重复的可能性。
+
+
+                    另见 presence_penalty，用于以固定速率惩罚至少出现一次的 tokens
+                  default: 0
+                  minimum: -2
+                  maximum: 2
+                  exclusiveMinimum: true
+                  exclusiveMaximum: true
+                  nullable: true
+                presence_penalty:
+                  type: number
+                  description: >-
+                    默认值为 0，正值会根据新 tokens 是否出现在当前文本中对其进行惩罚，从而增加模型谈论新话题的可能性。
+
+
+                    如果目的是稍微减少重复样本，合理的值大约在 0.1 到 1 之间。如果目的是强烈抑制重复，可以将系数提高到
+                    2，但这可能会显著降低样本质量。负值可以用来增加重复的可能性。
+
+
+                    另见 frequency_penalty，用于根据 tokens 出现的频率按递增速率进行惩罚
+                  minimum: -2
+                  maximum: 2
+                  exclusiveMinimum: true
+                  exclusiveMaximum: true
+                  nullable: true
+                repetition_penalty:
+                  type: number
+                  description: >-
+                    对重复的 tokens 应用惩罚，以抑制或鼓励重复。值为 1.0 表示没有惩罚，允许自由重复。大于 1.0
+                    的值会惩罚重复，降低重复 tokens 的可能性。介于 0.0 和 1.0 之间的值会奖励重复，增加重复 tokens
+                    的机会。为了达到良好的平衡，通常建议使用 1.2。请注意，在仅解码器模型中，惩罚会同时应用于生成的输出和提示。
+                  minimum: 0
+                  maximum: 2
+                  exclusiveMinimum: true
+                  exclusiveMaximum: true
+                  nullable: true
+                top_k:
+                  type: number
+                  minimum: 1
+                  maximum: 128
+                  exclusiveMinimum: true
+                  exclusiveMaximum: true
+                  description: >-
+                    Top-k 采样是另一种采样方法，在这种方法中，k 个最可能的下一个 tokens 会被筛选出来，并且概率质量仅在这 k
+                    个 tokens 之间重新分配。k 的值控制了在每一步生成文本时，下一个 tokens 的候选数量。
+                  nullable: true
+                min_p:
+                  type: number
+                  description: |
+                    表示一个 tokens 被考虑的最小概率的浮动值，相对于最有可能的 tokens 的概率。
+                  nullable: true
+                logit_bias:
+                  type: object
+                  properties: {}
+                  x-apifox-orders: []
+                  description: >
+                    默认为 null。修改指定 tokens 在对话中出现的可能性。接受一个 JSON 对象，将 tokens 映射到一个从
+                    -100 到 100 的关联偏差值。
+                01KP5NABP505Q46C0NW8XXAPCD:
+                  x-tmp-pending-properties: true
+                logprobs:
+                  type: integer
+                  description: >
+                    返回最可能的 logprobs 个输出 token 的对数概率，同时包含被选中 token 的概率。例如，如果
+                    logprobs 设为 5，API 会返回每步生成时前 5 个最可能 token 的对数概率列表。
+
+
+                    logprobs 的最大值为 5。
+                  nullable: true
+                best_of:
+                  type: integer
+                  description: >
+                    默认为 1。生成 best_of 个对话并在服务器端进行处理，返回‘最佳’（即每个 tokens
+                    的对数概率最高的那个）。结果无法流式传输。
+
+
+                    与 n 一起使用时，best_of 控制候选对话的数量，n 指定返回多少个对话。best_of 必须大于 n。
+
+
+                    注意：由于此参数会生成多个对话，因此可能会快速消耗您的 tokens 计费额度。请谨慎使用，并确保为
+                    max_tokens 和 stop 设置了合理的值。
+              required:
+                - model
+                - prompt
+                - best_of
+            example: |-
+              curl --request POST \
+                --url https: //api.jiekou.ai/openai/v1/completions \
+                --header 'Authorization: <authorization>' \
+                --header 'Content-Type: <content-type>' \
+                --data '
+              {
+                  "model": "<string>",
+                  "prompt": "<string>",
+                  "max_tokens": 123,
+                  "stream": {},
+                  "stream_options": {
+                      "include_usage": true
+                  },
+                  "n": {},
+                  "seed": {},
+                  "frequency_penalty": {},
+                  "presence_penalty": {},
+                  "repetition_penalty": {},
+                  "stop": {},
+                  "temperature": {},
+                  "top_p": {},
+                  "top_k": {},
+                  "min_p": {},
+                  "logit_bias": {},
+                  "logprobs": {},
+                  "best_of": 123
+              }
+              '
+        required: true
+      responses:
+        "200":
+          description: 成功创建响应
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CompletionResponse"
+              example:
+                choices:
+                  - finish_reason: <string>
+                    index: 123
+                    logprobs:
+                      text_offset:
+                        - {}
+                      token_logprobs:
+                        - {}
+                      tokens:
+                        - {}
+                      top_logprobs:
+                        - "{key}": 123
+                    text: <string>
+                created: 123
+                id: <string>
+                model: <string>
+                object: <string>
+                usage:
+                  completion_tokens: 123
+                  prompt_tokens: 123
+                  total_tokens: 123
+          headers: {}
+          x-apifox-name: 成功
+          x-apifox-ordering: 0
+      security: []
+      x-apifox-folder: 补全（Completions）
+      x-apifox-status: released
+      x-run-in-apifox: https://app.apifox.com/web/project/7707339/apis/api-405299527-run
+components:
+  schemas:
+    CompletionResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        object:
+          type: string
+          example: text_completion
+        created:
+          type: integer
+        model:
+          type: string
+        choices:
+          type: array
+          items:
+            type: object
+            properties:
+              text:
+                type: string
+              index:
+                type: integer
+              finish_reason:
+                type: string
+            x-apifox-orders:
+              - text
+              - index
+              - finish_reason
+            x-apifox-ignore-properties: []
+        usage:
+          $ref: "#/components/schemas/Usage"
+      x-apifox-orders:
+        - id
+        - object
+        - created
+        - model
+        - choices
+        - usage
+      x-apifox-ignore-properties: []
+      x-apifox-folder: ""
+    Usage:
+      type: object
+      properties:
+        prompt_tokens:
+          type: integer
+          description: 提示词 Token 数
+        completion_tokens:
+          type: integer
+          description: 补全 Token 数
+        total_tokens:
+          type: integer
+          description: 总 Token 数
+        prompt_tokens_details:
+          type: object
+          properties:
+            cached_tokens:
+              type: integer
+            text_tokens:
+              type: integer
+            audio_tokens:
+              type: integer
+            image_tokens:
+              type: integer
+          x-apifox-orders:
+            - cached_tokens
+            - text_tokens
+            - audio_tokens
+            - image_tokens
+          x-apifox-ignore-properties: []
+        completion_tokens_details:
+          type: object
+          properties:
+            text_tokens:
+              type: integer
+            audio_tokens:
+              type: integer
+            reasoning_tokens:
+              type: integer
+          x-apifox-orders:
+            - text_tokens
+            - audio_tokens
+            - reasoning_tokens
+          x-apifox-ignore-properties: []
+      x-apifox-orders:
+        - prompt_tokens
+        - completion_tokens
+        - total_tokens
+        - prompt_tokens_details
+        - completion_tokens_details
+      x-apifox-ignore-properties: []
+      x-apifox-folder: ""
+  responses: {}
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+servers:
+  - url: https://tokensmind.ai
+    description: 正式环境
+security:
+  - bearer: []

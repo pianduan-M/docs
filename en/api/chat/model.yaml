@@ -1,0 +1,165 @@
+openapi: 3.0.1
+info:
+  title: LLM API
+  version: 1.0.0
+paths:
+  /v1/models:
+    get:
+      summary: List models
+      deprecated: false
+      description: |
+        Returns the list of models available for the LLM API, with basic metadata for each model. This endpoint is compatible with the OpenAI API.
+
+        Response format is selected from request headers:
+        - If both `x-api-key` and `anthropic-version` are present, the response uses the Anthropic format
+        - If the `x-goog-api-key` header or the `key` query parameter is present, the response uses the Gemini format
+        - Otherwise, the response uses the OpenAI format
+      operationId: listModels
+      tags:
+        - Models / List models
+      parameters:
+        - name: Content-Type
+          in: header
+          required: true
+          description: Must be application/json
+          schema:
+            type: string
+            enum:
+              - application/json
+        - name: Authorization
+          in: header
+          required: true
+          description: "Bearer authentication: Bearer {{API key}}"
+          schema:
+            type: string
+        - name: key
+          in: query
+          description: Google API key (for Gemini format)
+          required: false
+          schema:
+            type: string
+        - name: x-api-key
+          in: header
+          description: Anthropic API key (for Claude format)
+          required: false
+          example: ""
+          schema:
+            type: string
+        - name: anthropic-version
+          in: header
+          description: Anthropic API version
+          required: false
+          example: ""
+          schema:
+            type: string
+            example: "2023-06-01"
+        - name: x-goog-api-key
+          in: header
+          description: Google API key (for Gemini format)
+          required: false
+          example: ""
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successfully retrieved the model list
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ModelsResponse"
+          headers: {}
+          x-apifox-name: Success
+          x-apifox-ordering: 0
+        "401":
+          description: Authentication failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+          headers: {}
+          x-apifox-name: Unauthorized
+          x-apifox-ordering: 1
+      security: []
+
+components:
+  schemas:
+    ModelsResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          example: list
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/Model"
+      x-apifox-orders:
+        - object
+        - data
+      x-apifox-ignore-properties: []
+      x-apifox-folder: ""
+    Model:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Model ID
+          example: gpt-4
+        object:
+          type: string
+          description: Object type
+          example: model
+        created:
+          type: integer
+          description: Creation timestamp
+        owned_by:
+          type: string
+          description: Model owner
+          example: openai
+      x-apifox-orders:
+        - id
+        - object
+        - created
+        - owned_by
+      x-apifox-ignore-properties: []
+      x-apifox-folder: ""
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            message:
+              type: string
+              description: Error message
+            type:
+              type: string
+              description: Error type
+            param:
+              type: string
+              description: Related parameter
+              nullable: true
+            code:
+              type: string
+              description: Error code
+              nullable: true
+          x-apifox-orders:
+            - message
+            - type
+            - param
+            - code
+          x-apifox-ignore-properties: []
+      x-apifox-orders:
+        - error
+      x-apifox-ignore-properties: []
+      x-apifox-folder: ""
+  responses: {}
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+servers:
+  - url: https://tokensmind.ai
+    description: Production
+security:
+  - bearer: []

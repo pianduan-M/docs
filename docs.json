@@ -117,6 +117,7 @@
               {
                 "group": "隐私和条款",
                 "pages": [
+                  "zh/guide/termsAndPrivacy/terms",
                   "zh/guide/termsAndPrivacy/privacy-policy"
                 ]
               }
@@ -133,6 +134,26 @@
               "zh/editor/QwenCode",
               "zh/editor/VoidEditor",
               "zh/editor/Clawx"
+            ]
+          },
+          {
+            "tab": "API 手册",
+            "pages": [
+              {
+                "group": "API 基础",
+                "pages": [
+                  "zh/api/basic/auth",
+                  "zh/api/basic/reference-error-code"
+                ]
+              },
+              {
+                "group": "大语言模型",
+                "pages": [
+                  "zh/api/chat/model",
+                  "zh/api/chat/chat-completion",
+                  "zh/api/chat/create-completion"
+                ]
+              }
             ]
           },
           {
@@ -251,6 +272,7 @@
               {
                 "group": "Privacy and terms",
                 "pages": [
+                  "en/guide/termsAndPrivacy/terms",
                   "en/guide/termsAndPrivacy/privacy-policy"
                 ]
               }
@@ -267,6 +289,26 @@
               "en/editor/QwenCode",
               "en/editor/VoidEditor",
               "en/editor/Clawx"
+            ]
+          },
+          {
+            "tab": "API reference",
+            "pages": [
+              {
+                "group": "API basics",
+                "pages": [
+                  "en/api/basic/auth",
+                  "en/api/basic/reference-error-code"
+                ]
+              },
+              {
+                "group": "Large language models",
+                "pages": [
+                  "en/api/chat/model",
+                  "en/api/chat/chat-completion",
+                  "en/api/chat/create-completion"
+                ]
+              }
             ]
           },
           {

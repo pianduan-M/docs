@@ -1,0 +1,165 @@
+openapi: 3.0.1
+info:
+  title: LLM API
+  version: 1.0.0
+paths:
+  /v1/models:
+    get:
+      summary: 获取模型列表
+      deprecated: false
+      description: |
+        获取当前可用于 LLM API 的模型列表，并提供每个模型的基本信息。此 Endpoint 与 OpenAI API 兼容。
+
+        根据请求头自动识别返回格式：
+        - 包含 `x-api-key` 和 `anthropic-version` 头时返回 Anthropic 格式
+        - 包含 `x-goog-api-key` 头或 `key` 查询参数时返回 Gemini 格式
+        - 其他情况返回 OpenAI 格式
+      operationId: listModels
+      tags:
+        - 模型（Models）/列出模型
+      parameters:
+        - name: Content-Type
+          in: header
+          required: true
+          description: 枚举值 application/json
+          schema:
+            type: string
+            enum:
+              - application/json
+        - name: Authorization
+          in: header
+          required: true
+          description: "Bearer 身份验证格式: Bearer {{API 秘钥}}"
+          schema:
+            type: string
+        - name: key
+          in: query
+          description: Google API Key (用于 Gemini 格式)
+          required: false
+          schema:
+            type: string
+        - name: x-api-key
+          in: header
+          description: Anthropic API Key (用于 Claude 格式)
+          required: false
+          example: ""
+          schema:
+            type: string
+        - name: anthropic-version
+          in: header
+          description: Anthropic API 版本
+          required: false
+          example: ""
+          schema:
+            type: string
+            example: "2023-06-01"
+        - name: x-goog-api-key
+          in: header
+          description: Google API Key (用于 Gemini 格式)
+          required: false
+          example: ""
+          schema:
+            type: string
+      responses:
+        "200":
+          description: 成功获取模型列表
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ModelsResponse"
+          headers: {}
+          x-apifox-name: 成功
+          x-apifox-ordering: 0
+        "401":
+          description: 认证失败
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+          headers: {}
+          x-apifox-name: 没有权限
+          x-apifox-ordering: 1
+      security: []
+
+components:
+  schemas:
+    ModelsResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          example: list
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/Model"
+      x-apifox-orders:
+        - object
+        - data
+      x-apifox-ignore-properties: []
+      x-apifox-folder: ""
+    Model:
+      type: object
+      properties:
+        id:
+          type: string
+          description: 模型 ID
+          example: gpt-4
+        object:
+          type: string
+          description: 对象类型
+          example: model
+        created:
+          type: integer
+          description: 创建时间戳
+        owned_by:
+          type: string
+          description: 模型所有者
+          example: openai
+      x-apifox-orders:
+        - id
+        - object
+        - created
+        - owned_by
+      x-apifox-ignore-properties: []
+      x-apifox-folder: ""
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            message:
+              type: string
+              description: 错误信息
+            type:
+              type: string
+              description: 错误类型
+            param:
+              type: string
+              description: 相关参数
+              nullable: true
+            code:
+              type: string
+              description: 错误代码
+              nullable: true
+          x-apifox-orders:
+            - message
+            - type
+            - param
+            - code
+          x-apifox-ignore-properties: []
+      x-apifox-orders:
+        - error
+      x-apifox-ignore-properties: []
+      x-apifox-folder: ""
+  responses: {}
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+servers:
+  - url: https://tokensmind.ai
+    description: 正式环境
+security:
+  - bearer: []
