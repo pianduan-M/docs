@@ -115,9 +115,9 @@
                 ]
               },
               {
-                "group": "API 手册",
+                "group": "隐私和条款",
                 "pages": [
-                  "zh/guide/api/user-manual"
+                  "zh/guide/termsAndPrivacy/privacy-policy"
                 ]
               }
             ]
@@ -246,6 +246,12 @@
                   "en/guide/chat/Anthropic Claude",
                   "en/guide/chat/ChatGPT嵌入（Embeddings）",
                   "en/guide/chat/ChatGPT自动补全（Completions）"
+                ]
+              },
+              {
+                "group": "Privacy and terms",
+                "pages": [
+                  "en/guide/termsAndPrivacy/privacy-policy"
                 ]
               }
             ]
