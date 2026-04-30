@@ -294,11 +294,4 @@ Newer Claude Code builds expect **`ANTHROPIC_AUTH_TOKEN`** instead of `ANTHROPIC
 
 Upgrade Claude Code to the latest version and disable CC-Switch local proxy / failover if enabled.
 
-## More links
-
-- [GitHub](https://github.com/inferera/aihubmix/blob/main/packages/claude-code/README.md)
-- [npm package](https://www.npmjs.com/package/@aihubmix/claude-code)
-- [Anthropic best practices](https://www.anthropic.com/engineering/claude-code-best-practices)
-- [Official settings](https://docs.anthropic.com/en/docs/claude-code/settings#settings-files)
-
 Happy coding!

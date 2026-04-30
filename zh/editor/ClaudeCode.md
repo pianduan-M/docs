@@ -37,7 +37,7 @@ npm install -g @anthropic-ai/claude-code
 要通过兼容 Anthropic API 的方式来接入 Tokensmind 的模型服务，需要配置以下环境变量。
 
 1. 将`ANTHROPIC_BASE_URL` 设置为`https://tokensmind.ai`
-2. `ANTHROPIC_AUTH_TOKEN` 设置为从 [Tokensmind 平台](https://console.aihubmix.com/token) 获取的 API Key
+2. `ANTHROPIC_AUTH_TOKEN` 设置为从 [Tokensmind 平台](https://tokensmind.ai/token) 获取的 API Key
 3. `ANTHROPIC_MODEL`：设置为[模型列表](https://tokensmind.ai/pricing)中支持的模型。
 
 <Tabs>
@@ -89,7 +89,7 @@ npm install -g @anthropic-ai/claude-code
   </Tab>
 
   <Tab title="Windows">
-    在 Windows 中，可以通过 CMD 或 PowerShell 将 AiHubMix 的 Base URL 和 [API Key](https://help.aliyun.com/zh/model-studio/get-api-key) 设置为环境变量。
+    在 Windows 中，可以通过 CMD 或 PowerShell 将 Tokensmind 的 Base URL 和 [API Key](https://help.aliyun.com/zh/model-studio/get-api-key) 设置为环境变量。
 
     <Tabs>
       <Tab title="CMD">
@@ -311,12 +311,5 @@ claude -v
 <img src="/images/claudecode/7.png" />
 
 cc升级到最新版，并且关闭ccs的本地代理跟故障转移功能
-
-## 更多资源
-
-- [Github](https://github.com/inferera/aihubmix/blob/main/packages/claude-code/README.md)
-- [npm 包](https://www.npmjs.com/package/@aihubmix/claude-code)
-- [官方最佳实践](https://www.anthropic.com/engineering/claude-code-best-practices)
-- [官方配置指引](https://docs.anthropic.com/en/docs/claude-code/settings#settings-files)
 
 祝你使用愉快！
