@@ -3,123 +3,165 @@ title: Privacy policy
 icon: shield-heart
 ---
 
-## Overview
+Last updated: 30 June 2026
 
-Welcome to TokenSmind. This privacy policy explains how we collect, use, store, and protect your personal information. We understand how important your personal information is to you and will do our best to keep it secure. By using our services, you agree to the data practices described in this privacy policy.
+This Privacy Policy explains how **HK Word Origin New Wisdom Technology Limited** ("TokensMind", "we", "us", or "our") collects, uses, stores, transfers, and protects personal data when you access tokensmind.ai, docs.tokensmind.ai, related dashboards, APIs, billing pages, support channels, and other TokensMind services (the "Services").
 
-## Company information
+TokensMind is a trade name operated by HK Word Origin New Wisdom Technology Limited. Unless expressly stated otherwise, HK Word Origin New Wisdom Technology Limited is the service operator, contracting entity, merchant of record, data user, billing entity, and customer support entity for the Services.
 
-TokenSmind is operated by **Shenzhen Ciyuan Xinzhi Technology Co., Ltd.** Our servers and databases are hosted on cloud platforms that meet international security standards, helping ensure the security and reliability of data processing.
+## 1. Hong Kong privacy framework
 
-## Information we collect
+We aim to handle personal data in accordance with the Personal Data (Privacy) Ordinance (Cap. 486) of Hong Kong ("PDPO"), including the Data Protection Principles covering collection, accuracy and retention, use, security, openness, and access/correction.
 
-### What we collect
+If you access the Services from another jurisdiction, additional local privacy laws may apply. You are responsible for using the Services in compliance with laws that apply to you.
 
-1. **Account information**: When you register for a TokenSmind account, we collect the email address, username, and password you provide.
-2. **Usage data**: We collect information about how you use our services, including:
-   - API call records
-   - Model usage
-   - Token consumption
-   - IP address and device information
-   - Application identifiers related to model requests
-3. **Payment information**: If you purchase our services, we collect the payment information we need; full payment card details are handled securely by our payment processing partners.
-4. **Business information** (where applicable): For enterprise customers, we may collect company name, tax ID, invoicing information, and similar details for compliance and billing.
+## 2. Personal data we collect
 
-### How we collect information
+We collect only data that is reasonably necessary for account operation, API delivery, billing, fraud prevention, security, customer support, legal compliance, and service improvement.
 
-1. **Directly from you**: Information you provide when you register, use, or purchase our services.
-2. **Automatically**: Information collected automatically through cookies, log files, and similar technologies.
-3. **Third parties**: In some cases, we may obtain information from third-party service providers (for example, identity verification services).
+### 2.1 Account data
 
-## How we use information
+- Email address.
+- Username, display name, or account identifier.
+- Password hash or authentication credential.
+- Login status, authentication logs, and security events.
+- Organization name, team name, role, or business contact details if you use a business account.
 
-We use the information we collect to:
+### 2.2 API usage and technical metadata
 
-1. **Provide the service**: Process API requests and deliver large language model (LLM) access.
-2. **Manage accounts**: Create and manage your account and verify your identity.
-3. **Billing and settlement**: Process payments, send invoices, manage subscriptions, and issue VAT invoices (for enterprise customers in China).
-4. **Improve the service**: Analyze usage patterns and optimize our services and API performance.
-5. **Customer support**: Respond to your questions and requests.
-6. **Security**: Detect and prevent fraud, abuse, and security threats.
-7. **Communications**: Send service notices, updates, and marketing messages (where you have agreed).
+When you use our API or dashboard, we may collect:
 
-## Privacy statement
+- API key identifier.
+- Request timestamp.
+- Selected model, routed model, or model group.
+- Endpoint, request method, response status, error code, latency, and retry information.
+- Token usage, usage units, credit deduction, and balance change.
+- IP address, approximate location derived from IP, user agent, device/browser information, and network information.
+- Application identifier, project identifier, organization identifier, or other metadata needed to operate and bill the Services.
 
-We take user privacy seriously and are committed to protecting your personal information. **We do not collect, log, or store any prompt content you send through our API or any response content returned by models.** Requests are transmitted directly to model providers with end-to-end encryption and are not stored by us in the middle. We do not disclose your identity information (including IP address and user-agent string) to model providers unless required by law.
+### 2.3 Payment and billing data
 
-## Sharing of information
+- Order number, payment amount, currency, payment status, payment channel, payment timestamp, refund status, and invoice/receipt records.
+- Billing contact details and company information where applicable.
+- Card payment data is processed by our payment service providers. We do not store full card numbers, CVV/CVC, or 3DS authentication credentials on our own systems.
 
-We do not sell your personal information. We may share your information in the following situations:
+### 2.4 Support and dispute data
 
-1. **Service providers**: With third parties that help us operate our services (such as payment processors, cloud providers, and analytics services).
-2. **Legal compliance**: When required by law or in response to lawful requests (such as court orders or subpoenas).
-3. **Protecting rights**: When we believe disclosure is necessary to protect the rights and safety of TokenSmind, our users, or the public.
-4. **Business transfers**: If TokenSmind is involved in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.
+- Information you provide when contacting support, requesting a refund, reporting abuse, or disputing a charge.
+- Screenshots, request IDs, API error details, and other materials you voluntarily provide.
 
-These third parties may access your information only to the extent necessary to perform their functions and must not use it for other purposes.
+### 2.5 Prompt and response content
 
-## Data security
+TokensMind does not, by default, persistently store the prompt content you submit through the API or the response content returned by model providers.
 
-We implement appropriate technical and organizational measures to protect your personal information, including:
+Prompt and response content is processed transiently for the purpose of routing the request to the relevant model provider, returning the output to you, enforcing security controls, and operating the Services. Model providers may process or retain content according to their own terms, data policies, contracts, and legal obligations.
 
-1. **Encryption in transit**: All API communication uses TLS/SSL encryption.
-2. **Secure storage**: Sensitive data is stored using industry-standard encryption.
-3. **Access controls**: Employee access to personal data is strictly limited.
-4. **Regular reviews**: We regularly assess and update our security measures.
+We do not use your prompt or response content to train our own models. We do not knowingly submit your prompt or response content to third parties for model training.
 
-Although we work hard to protect your personal information, no security measure is completely infallible.
+## 3. How we collect data
 
-## Data retention
+We collect data:
 
-We retain your personal information for as long as needed to fulfill the purposes described in this privacy policy, unless the law requires or permits a longer retention period. When your personal information is no longer needed, we will delete or anonymize it securely.
+- Directly from you when you register, log in, make a payment, create an API key, submit support requests, or configure your account.
+- Automatically when you use the Services, including through logs, cookies, SDKs, APIs, and security tools.
+- From service providers such as payment processors, fraud prevention providers, cloud infrastructure providers, analytics providers, and identity or compliance vendors.
 
-## Data storage and international transfers
+## 4. How we use data
 
-Our servers and databases are hosted on cloud platforms that meet international security standards. If you are located outside China, please be aware that your information may be transferred to and processed in China. Data protection laws in China may differ from those in your country or region. By using our services, you consent to the transfer and processing of your information in China.
+We use data to:
 
-## API call content
+- Provide, maintain, route, secure, and improve the Services.
+- Create and manage accounts, organizations, API keys, credits, usage limits, and billing records.
+- Process payments, credits, refunds, invoices, receipts, disputes, and chargebacks.
+- Calculate API usage, token consumption, account balances, and fees.
+- Detect and prevent fraud, abuse, illegal activity, unauthorized access, API key compromise, payment risk, and high-frequency automated misuse.
+- Enforce our Terms of Service, AI Safety & Abuse Policy, Credits & Refund Policy, and other policies.
+- Respond to customer support requests, refund requests, legal requests, and regulatory inquiries.
+- Send service notices, security alerts, billing notices, policy updates, and account-related messages.
+- Analyze aggregated or anonymized usage patterns to improve reliability, latency, routing, pricing, and product quality.
 
-1. **User input**: Prompts and queries sent to large language models (LLMs) through our API.
-2. **Model output**: Content generated by large language models (LLMs).
+We do not sell personal data.
 
-### Additional notes on API call content
+## 5. Sharing and transfers
 
-- We do not use content you send through our API to train our own models or any third-party models.
-- We do not proactively review API call content.
-- Each model provider sets its own data policies. To understand a specific provider’s practices, refer to its official documentation.
+We may share data with the following categories of recipients where necessary:
 
-## Your rights and choices
+- Model API providers and upstream service providers, for the purpose of completing API requests.
+- Payment processors, acquiring banks, card networks, fraud prevention providers, and chargeback management providers.
+- Cloud hosting, database, network, logging, monitoring, analytics, email, and customer support providers.
+- Professional advisers, auditors, insurers, legal counsel, and compliance consultants.
+- Affiliates, successors, or acquirers in connection with a merger, acquisition, restructuring, financing, or sale of assets.
+- Law enforcement, courts, regulators, payment partners, or other authorities when required by law or when necessary to protect rights, safety, security, or the integrity of the Services.
 
-You may update certain personal information at any time through our platform’s user interface. If you wish to request deletion of your account and personal data, visit your settings page or contact us using the information below.
+Where personal data is transferred outside Hong Kong, we take reasonable steps to protect it through contractual, technical, and organizational measures appropriate to the nature of the data and the processing.
 
-## Cookie policy
+## 6. Model providers
 
-We use cookies and similar technologies to provide, secure, and improve our services. Cookies are small text files stored on your device that help remember your preferences and other information. By using our services, you agree to our use of these methods. You can control and delete cookies through your browser settings. Please note that disabling cookies may affect some features of our website.
+TokensMind may route requests to model providers such as OpenAI, Anthropic, Google, ByteDance, Qwen, Kimi, MiniMax, DeepSeek, Zhipu AI, or other providers shown in the dashboard or documentation. Available providers and models may change over time.
 
-## Children’s privacy
+Your prompt and response content may be transmitted to the selected or routed model provider solely to process your API request and return output. Each provider may have its own privacy, security, abuse-monitoring, logging, and retention practices. We encourage you to review the relevant provider policies for workloads involving sensitive data.
 
-Our services are not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we may have collected such information, contact us immediately and we will take steps to delete it.
+## 7. Data retention
 
-## Changes to this privacy policy
+We retain data only for as long as reasonably necessary for the purposes described in this Policy, unless a longer period is required or permitted by law, accounting rules, tax rules, payment network rules, dispute resolution, fraud prevention, or security needs.
 
-We may update this privacy policy from time to time without prior notice. When we make material changes, we will post a notice on our website and update the “Last updated” date at the top of the policy. Your continued use of our services after changes are posted means you accept and agree to those changes. We encourage you to review this privacy policy periodically to stay informed about how we protect your information.
+Typical retention periods:
 
-## Governing law
+| Data category                                                     | Typical retention                                                                                                                 |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Account profile data                                              | While the account is active, then up to 6 years after closure where needed for legal, tax, audit, dispute, or compliance purposes |
+| Authentication and security logs                                  | Up to 24 months, unless needed longer for security investigation or legal compliance                                              |
+| API usage metadata, model selection, token usage, balance changes | Up to 6 years for billing, audit, dispute, and compliance records                                                                 |
+| Prompt/response content                                           | Not persistently stored by TokensMind by default; transiently processed to provide the API response                               |
+| Payment, order, refund, receipt, and chargeback records           | Up to 7 years or longer if required by payment partners, tax, accounting, or legal obligations                                    |
+| Support tickets and user-submitted dispute materials              | Up to 3 years after case closure, unless needed longer for legal, security, or payment dispute reasons                            |
+| Fraud, abuse, enforcement, and evidence records                   | Up to 6 years, or longer where required for legal proceedings, law enforcement, or payment network disputes                       |
+| Cookies and analytics identifiers                                 | According to cookie type and browser settings; generally up to 24 months                                                          |
 
-This privacy policy is governed by the laws of the People’s Republic of China. Any dispute arising from or relating to this privacy policy shall be submitted to the competent people’s court in Shenzhen with jurisdiction.
+When data is no longer needed, we delete, anonymize, aggregate, or securely isolate it.
 
-## Termination
+## 8. Security
 
-We may terminate your use of the services at any time for any reason (including breach of the terms of service) and will notify you. You may terminate your use at any time by stopping use of our services.
+We use technical and organizational safeguards designed to protect personal data, including:
 
-After termination, all rights and obligations cease except those that by their nature should survive, including but not limited to ownership provisions, disclaimers, limitations of liability, and dispute resolution provisions.
+- TLS encryption for data in transit.
+- Encryption or access controls for sensitive stored data.
+- Password hashing and credential protection.
+- API key management and revocation controls.
+- Role-based access controls and least-privilege access.
+- Logging, monitoring, rate limits, and abuse detection.
+- Payment data minimization through payment processors.
+- Internal access review and security incident response procedures.
 
-## Contact us
+No system is completely secure. You are responsible for keeping your account credentials, API keys, devices, and integration environments secure.
 
-If you have questions, comments, or requests regarding this privacy policy, contact us:
+## 9. Abuse investigation without default content logging
 
-- **Business**: leon@tokensmind.ai
+Because TokensMind does not persistently store prompt/response content by default, we primarily investigate abuse through metadata and operational evidence, including account identifiers, API key identifiers, IP/device information, request timestamps, endpoint/model usage, token volume, error codes, payment records, support reports, user-provided samples, and upstream provider safety signals.
 
-## Last updated
+Where legally permitted and necessary to investigate serious abuse, fraud, security incidents, payment disputes, or lawful requests, we may temporarily preserve relevant materials voluntarily provided by users, generated by our systems, or received from providers or authorities. Access is limited to authorized personnel with a need to know.
 
-This privacy policy was last updated on May 12, 2025.
+## 10. Cookies
+
+We use cookies and similar technologies to operate login sessions, remember preferences, improve security, measure performance, detect fraud, and understand product usage. You may control cookies through your browser settings. Disabling cookies may affect login, payment, dashboard, or security functions.
+
+## 11. Your rights and choices
+
+Subject to applicable law, you may request access to or correction of your personal data. You may also request account deletion, subject to retention required for legal, billing, tax, dispute, fraud prevention, payment network, or security purposes.
+
+To submit a request, contact us at the address below. We may need to verify your identity before responding.
+
+## 12. Children
+
+The Services are not directed to children. You must be at least 18 years old, or the age of majority in your jurisdiction, to use the Services. We do not knowingly collect personal data from children.
+
+## 13. Changes
+
+We may update this Privacy Policy from time to time. The updated version will be posted on our website with a new "Last updated" date. Material changes may be notified through the dashboard, email, or website notice where appropriate.
+
+## 14. Contact
+
+Data user and service operator: **HK Word Origin New Wisdom Technology Limited**  
+Brand/Product: TokensMind  
+Email: leon@tokensmind.ai  
+Registered address: Room 1101D, 11/F, Lippo Sun Plaza, 28 Canton Road, Tsim Sha Tsui, Hong Kong

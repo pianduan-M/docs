@@ -118,7 +118,10 @@
                 "group": "隐私和条款",
                 "pages": [
                   "zh/guide/termsAndPrivacy/terms",
-                  "zh/guide/termsAndPrivacy/privacy-policy"
+                  "zh/guide/termsAndPrivacy/privacy-policy",
+                  "zh/guide/termsAndPrivacy/data-processing-log-retention",
+                  "zh/guide/termsAndPrivacy/credits-refund-policy",
+                  "zh/guide/termsAndPrivacy/ai-safety-and-abuse-policy"
                 ]
               }
             ]
@@ -273,7 +276,10 @@
                 "group": "Privacy and terms",
                 "pages": [
                   "en/guide/termsAndPrivacy/terms",
-                  "en/guide/termsAndPrivacy/privacy-policy"
+                  "en/guide/termsAndPrivacy/privacy-policy",
+                  "en/guide/termsAndPrivacy/data-processing-log-retention",
+                  "en/guide/termsAndPrivacy/credits-refund-policy",
+                  "en/guide/termsAndPrivacy/ai-safety-and-abuse-policy"
                 ]
               }
             ]
